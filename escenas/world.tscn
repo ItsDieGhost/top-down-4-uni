@@ -417,6 +417,7 @@ tile_set = SubResource("TileSet_rucbo")
 
 [node name="elevation" type="TileMapLayer" parent="flat(plano)"]
 position = Vector2(43, -130)
+tile_map_data = PackedByteArray("AADs/wUAAAAAAAIAAAA=")
 tile_set = SubResource("TileSet_qrh3c")
 
 [node name="arboles" type="TileMapLayer" parent="flat(plano)"]
