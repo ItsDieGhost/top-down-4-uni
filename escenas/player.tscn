@@ -1,7 +1,8 @@
-[gd_scene load_steps=23 format=3 uid="uid://cu5krt0uvxhdl"]
+[gd_scene load_steps=25 format=3 uid="uid://cu5krt0uvxhdl"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_18bb7"]
 [ext_resource type="Texture2D" uid="uid://bkni5p2prawyp" path="res://Art/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_mvcyq"]
+[ext_resource type="PackedScene" uid="uid://wu4tqdq67p0p" path="res://Componentes/health_component.tscn" id="3_r2vwe"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qdem1"]
 atlas = ExtResource("1_mvcyq")
@@ -119,7 +120,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fpcda")
 }],
-"loop": true,
+"loop": false,
 "name": &"idle",
 "speed": 10.0
 }, {
@@ -142,24 +143,50 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pf5gb")
 }],
-"loop": true,
+"loop": false,
 "name": &"run",
 "speed": 10.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wsyuy"]
+radius = 19.0
+height = 40.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vix8y"]
+size = Vector2(71.25, 91.5)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_18bb7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1, 0)
 sprite_frames = SubResource("SpriteFrames_u745q")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.290935
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 16)
 shape = SubResource("CapsuleShape2D_wsyuy")
 
+[node name="AreaAttack" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaAttack"]
+position = Vector2(49, -6)
+shape = SubResource("RectangleShape2D_vix8y")
+debug_color = Color(0.880918, 0.278803, 0.493253, 0.42)
+
+[node name="Components" type="Node" parent="."]
+
+[node name="HealthComponent" parent="Components" node_paths=PackedStringArray("progress_bar") instance=ExtResource("3_r2vwe")]
+progress_bar = NodePath("../../ProgressBar")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -48.0
+offset_top = -89.0
+offset_right = 49.0
+offset_bottom = -67.0
+value = 50.0
+show_percentage = false
+
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="AreaAttack" to="." method="_on_area_attack_body_entered"]
+[connection signal="body_exited" from="AreaAttack" to="." method="_on_area_attack_body_exited"]
