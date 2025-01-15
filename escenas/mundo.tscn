@@ -1,0 +1,61 @@
+[gd_scene load_steps=10 format=3 uid="uid://813kvyj11smt"]
+
+[ext_resource type="Texture2D" uid="uid://ds158rlqwdcx8" path="res://Art/Resources/Trees/Tree.png" id="1_nr6v1"]
+[ext_resource type="Script" path="res://animated_sprite_2d.gd" id="2_6cjwv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lh74q"]
+atlas = ExtResource("1_nr6v1")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ycgxb"]
+atlas = ExtResource("1_nr6v1")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ht7d6"]
+atlas = ExtResource("1_nr6v1")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1n72a"]
+atlas = ExtResource("1_nr6v1")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wcun4"]
+atlas = ExtResource("1_nr6v1")
+region = Rect2(0, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ajlct"]
+atlas = ExtResource("1_nr6v1")
+region = Rect2(192, 192, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yy0ad"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lh74q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ycgxb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ht7d6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1n72a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wcun4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ajlct")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="trees" type="Node2D"]
+script = ExtResource("2_6cjwv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(283, 116)
+sprite_frames = SubResource("SpriteFrames_yy0ad")
