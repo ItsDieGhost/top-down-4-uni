@@ -162,10 +162,12 @@ animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(-2, 12)
 shape = SubResource("CapsuleShape2D_t7fbt")
 
 [node name="AreaAttack" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaAttack"]
 position = Vector2(49, -6)
