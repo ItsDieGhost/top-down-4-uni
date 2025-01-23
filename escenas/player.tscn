@@ -160,6 +160,8 @@ script = ExtResource("1_18bb7")
 sprite_frames = SubResource("SpriteFrames_u745q")
 animation = &"idle"
 autoplay = "idle"
+frame = 5
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false

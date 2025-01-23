@@ -43,7 +43,7 @@ func on_death():
 	print ("game over")
 	get_tree().paused = true
 	
-	#aqui termina la animacion de ataque
+#aqui termina la animacion de ataque
 func _on_animated_sprite_2d_animation_finished() -> void:
 	if sprite_animation.animation == "attack":
 		is_attack = false
