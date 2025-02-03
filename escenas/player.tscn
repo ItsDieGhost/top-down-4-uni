@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cu5krt0uvxhdl"]
+[gd_scene load_steps=26 format=3 uid="uid://cu5krt0uvxhdl"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_18bb7"]
 [ext_resource type="Texture2D" uid="uid://bkni5p2prawyp" path="res://Art/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_mvcyq"]
@@ -150,6 +150,9 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t7fbt"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_5mmuv"]
+radius = 41.0122
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vix8y"]
 size = Vector2(71.25, 91.5)
 
@@ -158,18 +161,20 @@ script = ExtResource("1_18bb7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_u745q")
-animation = &"idle"
+animation = &"run"
 autoplay = "idle"
-frame = 5
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(-2, 12)
 shape = SubResource("CapsuleShape2D_t7fbt")
 
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, 1)
+shape = SubResource("CircleShape2D_5mmuv")
+
 [node name="AreaAttack" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaAttack"]
 position = Vector2(49, -6)

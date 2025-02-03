@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://1reqx1bvjr2d"]
+
+[ext_resource type="Texture2D" uid="uid://ds158rlqwdcx8" path="res://Art/Resources/Trees/Tree.png" id="1_5dyn7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wdt66"]
+atlas = ExtResource("1_5dyn7")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_31cbu"]
+atlas = ExtResource("1_5dyn7")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x6g32"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wdt66")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_31cbu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4mx3r"]
+radius = 27.0
+height = 86.0
+
+[node name="tree" type="StaticBody2D"]
+position = Vector2(2, -5)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_x6g32")
+autoplay = "default"
+frame_progress = 0.695976
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, 46)
+shape = SubResource("CapsuleShape2D_4mx3r")
+debug_color = Color(0.983396, 0, 0.353419, 0.42)
+metadata/_edit_lock_ = true

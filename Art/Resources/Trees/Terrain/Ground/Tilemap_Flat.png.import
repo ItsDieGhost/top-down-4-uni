@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbj67o2fkwb5h"
-path="res://.godot/imported/Rocks_01.png-72ff3160bbed94337e0e1bf3fe374702.ctex"
+uid="uid://cil472vqj8172"
+path="res://.godot/imported/Tilemap_Flat.png-6a844e196edbc975a3219ed069c6f099.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Terrain/Water/Rocks/Rocks_01.png"
-dest_files=["res://.godot/imported/Rocks_01.png-72ff3160bbed94337e0e1bf3fe374702.ctex"]
+source_file="res://Art/Resources/Trees/Terrain/Ground/Tilemap_Flat.png"
+dest_files=["res://.godot/imported/Tilemap_Flat.png-6a844e196edbc975a3219ed069c6f099.ctex"]
 
 [params]
 

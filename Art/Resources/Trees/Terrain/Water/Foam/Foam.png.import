@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8wwhurcacrvn"
-path="res://.godot/imported/Rocks_04.png-1e484003404b33d17f77beae4e403dae.ctex"
+uid="uid://u7nhxgjutk4a"
+path="res://.godot/imported/Foam.png-029bf678cf0a472dc335df492ce4ed9e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Terrain/Water/Rocks/Rocks_04.png"
-dest_files=["res://.godot/imported/Rocks_04.png-1e484003404b33d17f77beae4e403dae.ctex"]
+source_file="res://Art/Resources/Trees/Terrain/Water/Foam/Foam.png"
+dest_files=["res://.godot/imported/Foam.png-029bf678cf0a472dc335df492ce4ed9e.ctex"]
 
 [params]
 

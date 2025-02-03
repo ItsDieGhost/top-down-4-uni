@@ -1,0 +1,77 @@
+[gd_scene load_steps=7 format=3 uid="uid://bfpykpyqmt73u"]
+
+[ext_resource type="Script" path="res://scripts/opciones.gd" id="1_5xgbp"]
+[ext_resource type="VideoStream" path="res://Art/UI/Banners/gif.ogv" id="1_xsusc"]
+
+[sub_resource type="Theme" id="Theme_k6qg4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5cbqj"]
+bg_color = Color(0.512659, 0.444154, 0.337106, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gujee"]
+bg_color = Color(0.513726, 0.443137, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ntemq"]
+bg_color = Color(0.513726, 0.443137, 0.337255, 1)
+
+[node name="Opciones" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_k6qg4")
+script = ExtResource("1_5xgbp")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_xsusc")
+autoplay = true
+expand = true
+loop = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -341.0
+offset_top = -118.0
+offset_right = 318.0
+offset_bottom = 131.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Como jugar" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_5cbqj")
+text = "Como Jugar
+"
+
+[node name="Creditos" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_gujee")
+text = "Creditos
+"
+
+[node name="Atras" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_ntemq")
+text = "Atras
+"
+
+[connection signal="pressed" from="VBoxContainer/Como jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="VBoxContainer/Creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="VBoxContainer/Atras" to="." method="_on_atras_pressed"]

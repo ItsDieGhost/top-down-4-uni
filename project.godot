@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.3", "GL Compatibility")
 run/max_fps=60
 config/icon="res://Art/icon.svg"
 
+[autoload]
+
+GDialogoss="*res://scripts/Dialogoss.gd"
+
 [display]
 
 window/size/viewport_width=1280

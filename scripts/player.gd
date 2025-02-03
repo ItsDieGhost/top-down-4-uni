@@ -27,7 +27,7 @@ func _physics_process(_delta: float) -> void:
 			velocity = move_direction * move_speed
 			sprite_animation.play("run")
 			if move_direction.x !=0:
-				sprite_animation.flip_h = move_direction.x <0
+				sprite_animation.flip_h = move_direction.x < 0
 				$AreaAttack.scale.x = -1 if move_direction.x < 0 else 1
 		else: 
 			velocity = velocity.move_toward(Vector2.ZERO, move_speed)

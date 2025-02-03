@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w6myhbfuobfb"
-path="res://.godot/imported/Water.png-e0e69e5826240fc9ad0104a8b2c251cb.ctex"
+uid="uid://4pijv8qo8ekp"
+path="res://.godot/imported/Bridge_All.png-da2f89a9e32449e54d52e2d62d3d9d78.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Terrain/Water/Water.png"
-dest_files=["res://.godot/imported/Water.png-e0e69e5826240fc9ad0104a8b2c251cb.ctex"]
+source_file="res://Art/Resources/Trees/Terrain/Bridge/Bridge_All.png"
+dest_files=["res://.godot/imported/Bridge_All.png-da2f89a9e32449e54d52e2d62d3d9d78.ctex"]
 
 [params]
 

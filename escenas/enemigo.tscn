@@ -119,14 +119,12 @@ autoplay = "run"
 frame_progress = 0.838147
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(-6, 16)
 shape = SubResource("CapsuleShape2D_kqg0y")
 
 [node name="AreaAttack" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaAttack"]
-visible = false
 position = Vector2(37, -4)
 scale = Vector2(-1, -1)
 shape = SubResource("RectangleShape2D_1ivv3")

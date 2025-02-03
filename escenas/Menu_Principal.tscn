@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bcgitxofvr8te"]
+[gd_scene load_steps=9 format=3 uid="uid://bcgitxofvr8te"]
 
 [ext_resource type="Script" path="res://escenas/menu_principal.gd" id="1_rl2eq"]
 [ext_resource type="VideoStream" path="res://Art/UI/Banners/gif.ogv" id="2_1o8o8"]
+[ext_resource type="PackedScene" uid="uid://bfpykpyqmt73u" path="res://escenas/Opciones.tscn" id="3_mx6v3"]
 [ext_resource type="AudioStream" uid="uid://1ig45xgno4v0" path="res://Musica/Mutation.mp3" id="3_q74pr"]
 
 [sub_resource type="Theme" id="Theme_k6qg4"]
@@ -25,14 +26,15 @@ grow_vertical = 2
 theme = SubResource("Theme_k6qg4")
 script = ExtResource("1_rl2eq")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Opciones2" parent="." instance=ExtResource("3_mx6v3")]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.325892, 0.314932, 0.317691, 1)
+
+[node name="Opciones" parent="." instance=ExtResource("3_mx6v3")]
+layout_mode = 1
+offset_left = 3.0
+offset_top = -3.0
+offset_right = 3.0
+offset_bottom = -3.0
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
 layout_mode = 1
@@ -68,11 +70,11 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_5cbqj")
 text = "Jugar
 "
 
-[node name="Creditos" type="Button" parent="VBoxContainer"]
+[node name="Opciones" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_gujee")
-text = "Creditos
+text = "Opciones
 "
 
 [node name="Salir" type="Button" parent="VBoxContainer"]
@@ -84,9 +86,9 @@ text = "Salir
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_q74pr")
-volume_db = -18.0
+volume_db = 18.0
 autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Jugar" to="." method="_on_jugar_pressed"]
-[connection signal="pressed" from="VBoxContainer/Creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="VBoxContainer/Opciones" to="." method="_on_opciones_pressed"]
 [connection signal="pressed" from="VBoxContainer/Salir" to="." method="_on_salir_pressed"]

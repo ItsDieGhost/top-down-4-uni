@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://u7nhxgjutk4a"
-path="res://.godot/imported/Foam.png-67e3a4be1146cadfcaca77dad2a57570.ctex"
+uid="uid://dtvdmyvbe2jx4"
+path="res://.godot/imported/Tilemap_Elevation.png-742cb3ed1dbfc29c8d0c86f0ecf1b0e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Terrain/Water/Foam/Foam.png"
-dest_files=["res://.godot/imported/Foam.png-67e3a4be1146cadfcaca77dad2a57570.ctex"]
+source_file="res://Art/Resources/Trees/Terrain/Ground/Tilemap_Elevation.png"
+dest_files=["res://.godot/imported/Tilemap_Elevation.png-742cb3ed1dbfc29c8d0c86f0ecf1b0e2.ctex"]
 
 [params]
 

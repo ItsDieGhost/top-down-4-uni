@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=3 uid="uid://nqr3snkek8pt"]
+
+[ext_resource type="Texture2D" uid="uid://q35yd8w3y55e" path="res://Art/UI/Banners/Banner_Connection_Left.png" id="1_5lvms"]
+
+[sub_resource type="Animation" id="Animation_fw60y"]
+resource_name = "Dialogo"
+
+[sub_resource type="Animation" id="Animation_qaoao"]
+resource_name = "escribir"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_inu4l"]
+_data = {
+"Dialogo": SubResource("Animation_fw60y"),
+"escribir": SubResource("Animation_qaoao")
+}
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Fondo" type="ColorRect" parent="."]
+anchors_preset = -1
+anchor_right = 0.075
+anchor_bottom = 0.092
+offset_left = 393.0
+offset_top = 521.0
+offset_right = 757.0
+offset_bottom = 526.76
+color = Color(0.165656, 0.165656, 0.165656, 1)
+
+[node name="Imagen" type="TextureRect" parent="."]
+anchors_preset = -1
+anchor_right = 0.062
+anchor_bottom = 0.115
+offset_left = 392.0
+offset_top = 601.0
+offset_right = 401.64
+offset_bottom = 602.2
+
+[node name="Cuadro" type="ReferenceRect" parent="."]
+offset_left = 390.0
+offset_top = 514.0
+offset_right = 858.0
+offset_bottom = 600.0
+
+[node name="Texto" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.07
+anchor_top = 0.136
+anchor_right = 0.239
+anchor_bottom = 0.186
+offset_left = 427.4
+offset_top = 447.08
+offset_right = 487.08
+offset_bottom = 461.08
+text = "jose es gay"
+autowrap_mode = 3
+
+[node name="Boton" type="Button" parent="."]
+anchors_preset = -1
+anchor_right = 0.255
+offset_left = 784.0
+offset_top = 533.0
+offset_right = 514.6
+offset_bottom = 582.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_inu4l")
+}
+
+[node name="BannerConnectionLeft" type="Sprite2D" parent="."]
+position = Vector2(434, 555)
+scale = Vector2(0.401042, 0.416667)
+texture = ExtResource("1_5lvms")
