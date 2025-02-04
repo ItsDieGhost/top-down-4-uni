@@ -7,11 +7,11 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func _activar(TEXTO:String, IMAGEN:Texture)->void:
-	$CanvasLayer.show();
+	$CanvasLayer.hide()
+	$CanvasLayer.show()
 	$CanvasLayer/Label.text=TEXTO;
 	$CanvasLayer/AnimationPlayer.play("Escribir")
 	$CanvasLayer/TextureRect.texture=IMAGEN;
-
 
 
 

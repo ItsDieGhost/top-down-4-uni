@@ -3,7 +3,7 @@ extends Node2D
 @onready var player: Player = $Player
 @onready var timer_spawn_enemy: Timer = $TimerSpawnEnemy
 const ENEMY = preload("res://escenas/enemigo.tscn")
-var time_second_spawn_enemy := 1000000 #AQUI SE CAMBIA CADA CUANTOS SEGUNDOS APARECE UN ENEMIGO
+var time_second_spawn_enemy := 100000 #AQUI SE CAMBIA CADA CUANTOS SEGUNDOS APARECE UN ENEMIGO
 
 func _ready() -> void:
 	timer_spawn_enemy.timeout.connect(spawn_enemy)
