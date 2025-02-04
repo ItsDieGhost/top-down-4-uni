@@ -1,6 +1,5 @@
 extends Node
-var npc1: bool = false
-
+var Phill: bool = false
 
 const npc:Dictionary = {
 	'cap1':{

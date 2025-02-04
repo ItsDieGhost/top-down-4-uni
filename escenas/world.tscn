@@ -32,7 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://ds158rlqwdcx8" path="res://Art/Resources/Trees/Tree.png" id="26_su4or"]
 [ext_resource type="Texture2D" uid="uid://he56yt7ed5el" path="res://Art/Factions/Knights/Buildings/Tower/Tower_Purple.png" id="27_qiuqu"]
 [ext_resource type="PackedScene" uid="uid://b0b46hu36jiim" path="res://escenas/NPC.tscn" id="30_t38by"]
-[ext_resource type="PackedScene" uid="uid://dd330pw7nmalv" path="res://dialogos.tscn" id="33_018ce"]
+[ext_resource type="PackedScene" uid="uid://dd330pw7nmalv" path="res://escenas/dialogos.tscn" id="33_018ce"]
 [ext_resource type="PackedScene" uid="uid://l4ta5jl8ym5y" path="res://escenas/phill.tscn" id="34_yfdrf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_khr45"]
@@ -3713,7 +3713,6 @@ debug_color = Color(5.77569e-07, 0.549391, 0.823798, 0.42)
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(63, 5)
 stream = ExtResource("6_3y8i0")
-volume_db = 5.0
 autoplay = true
 max_distance = 1e+08
 
@@ -3981,8 +3980,15 @@ offset_top = 412.0
 offset_right = -1715.0
 offset_bottom = 412.0
 
-[node name="Phill" parent="." groups=["interactuar"] instance=ExtResource("34_yfdrf")]
+[node name="Phill" parent="." instance=ExtResource("34_yfdrf")]
 position = Vector2(-44, 138)
+
+[node name="Activador" parent="Phill" index="2" groups=["interactuar"]]
+
+[connection signal="pressed" from="Dialogos/CanvasLayer/Button" to="Dialogos" method="_on_button_pressed"]
+[connection signal="body_entered" from="Phill/Activador" to="Dialogos" method="_on_activador_body_entered"]
+[connection signal="body_exited" from="Phill/Activador" to="Dialogos" method="_on_activador_body_exited"]
 
 [editable path="Player"]
 [editable path="Dialogos"]
+[editable path="Phill"]

@@ -1,7 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://l4ta5jl8ym5y"]
 
 [ext_resource type="Texture2D" uid="uid://bk5omdqo7vrg" path="res://Art/Factions/Knights/Troops/Pawn/Yellow/Pawn_Yellow.png" id="1_s0j1v"]
-[ext_resource type="Script" path="res://scripts/Phill.gd" id="2_udcj7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j7gqb"]
 atlas = ExtResource("1_s0j1v")
@@ -59,8 +58,9 @@ radius = 20.2237
 [sub_resource type="CircleShape2D" id="CircleShape2D_xaca2"]
 radius = 34.0
 
+[sub_resource type="GDScript" id="GDScript_87hm3"]
+
 [node name="Phill" type="CharacterBody2D"]
-script = ExtResource("2_udcj7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(242.5, 150.5)
@@ -81,7 +81,7 @@ position = Vector2(12, 10)
 position = Vector2(230, 141)
 shape = SubResource("CircleShape2D_xaca2")
 debug_color = Color(0.920687, 0.175929, 0.548201, 0.42)
-script = ExtResource("2_udcj7")
+script = SubResource("GDScript_87hm3")
 
 [connection signal="body_entered" from="Activador" to="." method="_on_activador_body_entered"]
 [connection signal="body_exited" from="Activador" to="." method="_on_activador_body_exited"]
