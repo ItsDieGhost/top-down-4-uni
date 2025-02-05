@@ -800,7 +800,7 @@ position = Vector2(-869, 987)
 texture = ExtResource("15_kdrde")
 
 [node name="29" type="Sprite2D" parent="Deco"]
-position = Vector2(-381, 1109)
+position = Vector2(-406, 1248)
 texture = ExtResource("9_mywa2")
 
 [node name="30" type="Sprite2D" parent="Deco"]
@@ -836,7 +836,7 @@ position = Vector2(290, 975)
 texture = ExtResource("5_idye2")
 
 [node name="06" type="Sprite2D" parent="Deco"]
-position = Vector2(-353, 1037)
+position = Vector2(-258, 1102)
 texture = ExtResource("17_ahd4s")
 
 [node name="07" type="Sprite2D" parent="Deco"]
@@ -972,7 +972,7 @@ tile_map_data = PackedByteArray("AAARAAYAAAACAAAAAAAQAAYAAAABAAAAAAAPAAYAAAABAAA
 tile_set = SubResource("TileSet_4vk1c")
 
 [node name="TILES X16" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AADX/zIAAAAAAAEAAAD9/00AAAAAAAEAAAAxAPL/AAAAAAEAAABZAGUAAAAAAAEAAABZAGQAAAAAAAEAAABjAFgAAAAAAAEAAABNAGIAAAAAAAEAAAA2AD0AAAAAAAEAAABnAAoAAQAAAAIAAACV/wcAAAAAAAEAAAA=")
+tile_map_data = PackedByteArray("AADX/zIAAAAAAAEAAAD9/00AAAAAAAEAAABZAGUAAAAAAAEAAABZAGQAAAAAAAEAAABjAFgAAAAAAAEAAABNAGIAAAAAAAEAAAA2AD0AAAAAAAEAAACV/wcAAAAAAAEAAAAxAPP/AQAAAAIAAABnAAoAAAAAAAEAAAA=")
 tile_set = SubResource("TileSet_egt4s")
 
 [node name="NPC limites" parent="." instance=ExtResource("30_t38by")]
